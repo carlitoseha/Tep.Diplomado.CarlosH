@@ -10,7 +10,13 @@
         <tr><td>Matricula</td> <td>Nombre</td> <td> Apellido </td> <td> Telefono </td> <tr>    
        <#list estudiante as estud> 
         <form action="/formularioProcesado" method="post">
-             <tr><td>${estud.matricula}</td> <td>${estud.nombre}</td> <td>${estud.apellido}</td> <td>${estud.telefono}</td> <td><button name="eliminar" type="submit">Eliminar</button></td></tr>
+             <tr><td>${estud.matricula}</td> 
+                 <td>${estud.nombre}</td> 
+                 <td>${estud.apellido}</td> 
+                 <td>${estud.telefono}</td> 
+                 <td> <a href="/formularioProcesado?matricula=${estud.matricula}"><input name="eliminar" type="submit"/>Eliminar</a></td>
+                 <td> <a href="/formularioProcesado?matricula=${estud.matricula}"><input name="modificar" type="submit"/>Modificar</a></td>
+              </tr>
         </form>   
         </#list>
         </tbody>

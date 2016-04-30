@@ -2,7 +2,7 @@
 <html>
 <head>
    <title>${titulo}</title>
-    <link href="/css/miEstilo.css" rel="stylesheet" >
+    
 </head>
 <body>
     <h1>Ejemplo de formulario</h1>
@@ -17,6 +17,7 @@
     <form action="/formularioProcesado" method="post">
         <button name="enviar" type="submit">Mostrar</button>
     </form>
+    
     
 </body>
 </html>
