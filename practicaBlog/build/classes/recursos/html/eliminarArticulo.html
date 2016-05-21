@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <link href="css/bootstrap.css" rel="stylesheet" >
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <a class = "btn btn-primary" style = "margin-left:540px; margin-top: 20px;" href="/blog">Volver al Blog</a> 
+    </head>
+    <body>
+    <div class="container">
+    <div class="row">
+               
+    <img class="profile-img" src="http://pictogram2.com/p/p0282/i/m.png" alt="">                
+    <h1>Modificar Artículo</h1>
+    
+      <form class="form-signin" action="/eliminarArticulo" method="post">
+         <#list articulo as art>
+         <div>
+             <td>
+                 <tr><p>${art.idarticulo} ${art.titulo}</p><td>
+            <tr><a href="/modificarArticulo?idarticulo=${art.idarticulo}"><p>Modificar</p></a> </tr> 
+            <tr><a href="/eliminarArticulos?idarticulo=${art.idarticulo}"><p>Eliminar</p></a> </tr>
+             </td>
+         </div>
+         <br>
+        </#list>
+       </form>
+                
+           
+
+          
+       
+        </div>
+
+        </div>
+        <script src="js/bootstrap.js"></script> 
+    </body>
+</html>
